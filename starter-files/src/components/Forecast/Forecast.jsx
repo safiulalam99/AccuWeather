@@ -20,7 +20,7 @@ const Forecast = ({forecast}) => (
 
 Forecast.propTypes = {
     forecast: PropTypes.shape({
-        currentDay: PropTypes.array
+        currentDay: PropTypes.object
         
     }),
 };

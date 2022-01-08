@@ -13,6 +13,21 @@ const  Form = (props) => {
         props.submitSearch(location);
 
     }
+    console.log("check", 
+    location);
+    
+    function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else { 
+         console.log("Geolocation is not supported by this browser.");
+        }
+      }
+      function showPosition(position) {
+       console.log( "Latitude: " + position.coords.latitude) ;
+       console.log( position.coords.longitude);
+      }
+      
     return (
         <form onSubmit={onSubmit}>
             
@@ -29,6 +44,12 @@ const  Form = (props) => {
             <button type="submit" className={styles.button} onClick={onSubmit}>
                 SEARCH 
             </button>
+            <div className='button0' >
+            <button type="geoLocation" className={styles.button1} onClick={getLocation}>
+                Get my location
+            </button>
+            </div>
+
         </form>
     );
 };
