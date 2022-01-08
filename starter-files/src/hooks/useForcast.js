@@ -3,38 +3,17 @@ import axios from 'axios'
 import api from '../api/api';
 import getCurrentDayForecast from '../helpers/getCurrentDayForecast'
 
-// const API_KEY = 'qICUihh74lDzPPLDsj55ioWEWrcQ0sAm';
- const FIRST_API = 'http://dataservice.accuweather.com/locations/v1/cities/search?apikey=qICUihh74lDzPPLDsj55ioWEWrcQ0sAm&q=';
+// const API_KEY = '56mFA4VJG50cfGrVF9JHa8Rx5xNQ2kFB';
+ const FIRST_API = 'http://dataservice.accuweather.com/locations/v1/cities/search?apikey=56mFA4VJG50cfGrVF9JHa8Rx5xNQ2kFB&q=';
  const SECOND_API1 = `http://dataservice.accuweather.com/forecasts/v1/daily/1day/`;
- const SECOND_API2 = `?apikey=qICUihh74lDzPPLDsj55ioWEWrcQ0sAm&metric=true`;
-
+ const SECOND_API2 = `?apikey=56mFA4VJG50cfGrVF9JHa8Rx5xNQ2kFB&metric=true`;
+const geoAPI = `http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=56mFA4VJG50cfGrVF9JHa8Rx5xNQ2kFB&q=61.5088128%2C%2023.8092288`;
  
 export const WeatherIcons = {
-  "22":'/components/Icons/white-flower-beautiful-hd-pic-japantown-215486907.jpg',
-  "2": "/react-weather-app/icons/night.svg",
-  "3": "/react-weather-app/icons/day.svg",
-  "4": "/react-weather-app/icons/cloudy-night.svg",
-  "5": "/react-weather-app/icons/cloudy.svg",
-  "6": "/react-weather-app/icons/cloudy.svg",
-  "7": "/react-weather-app/icons/perfect-day.svg",
-  "8": "/react-weather-app/icons/cloudy-night.svg",
-  "9": "/react-weather-app/icons/rain.svg",
-  "10": "/react-weather-app/icons/rain-night.svg",
-  "11": "/react-weather-app/icons/rain.svg",
-  "12": "/react-weather-app/icons/rain-night.svg",
-  "13": "/react-weather-app/icons/storm.svg",
-  "14": "/react-weather-app/icons/storm.svg",
+
 };
 
 const getIcon = ()=> {}
-// let x= Math.floor(Date.now('hh:mm:ss') / 1000);
-// if (x>=30000){
-//   if (x<=567565){
-//       return day
-//   }
-// }
-// else 
-// {weatherIcon:data.data.DailyForecasts[0].Night.Icon},
 
 
 const useForcast = () =>
@@ -75,7 +54,7 @@ const useForcast = () =>
          setForcast({currentDay})
         setLoading(false);
         setIcon(getCurrentDayForecast(data,data1).weatherIcon)
-        console.log(currentDay);
+       // console.log(currentDay);
       }
     const submitRequest = async location =>
     {
@@ -86,7 +65,7 @@ const useForcast = () =>
         const data = await forecastData(response[0].Key)
         if(!data)return;
        // console.log(data.data.DailyForecasts);
-      // console.log(response);
+     // console.log(response[0].Key);
        card(data,response[0].EnglishName)
      
         } 

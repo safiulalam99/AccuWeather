@@ -17,15 +17,11 @@ const Page = () => {
             <Header />
             {!forecast && (
             <div className={`${styles.box} position-relative`}>
-            {/* {form} */}
             {!isLoading && <Form submitSearch= {onSubmit}/>}
-            {/* {error} */}
             {isError && <Error message={isError} />}
-            {/* {Loader} */}
             {isLoading && <Loader/>}
             </div>
             )}
-            {/* {forecast} */}
             {forecast && <Forecast forecast ={forecast} />}
         </Fragment>
     );

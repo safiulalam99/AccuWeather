@@ -13,8 +13,6 @@ const  Form = (props) => {
         props.submitSearch(location);
 
     }
-    console.log("check", 
-    location);
     
     function getLocation() {
         if (navigator.geolocation) {
@@ -45,9 +43,7 @@ const  Form = (props) => {
                 SEARCH 
             </button>
             <div className='button0' >
-            <button type="geoLocation" className={styles.button1} onClick={getLocation}>
-                Get my location
-            </button>
+            
             </div>
 
         </form>
