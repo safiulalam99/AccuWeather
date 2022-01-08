@@ -4,10 +4,9 @@ import api from '../api/api';
 import getCurrentDayForecast from '../helpers/getCurrentDayForecast'
 
 // const API_KEY = '56mFA4VJG50cfGrVF9JHa8Rx5xNQ2kFB';
- const FIRST_API = 'http://dataservice.accuweather.com/locations/v1/cities/search?apikey=56mFA4VJG50cfGrVF9JHa8Rx5xNQ2kFB&q=';
- const SECOND_API1 = `http://dataservice.accuweather.com/forecasts/v1/daily/1day/`;
- const SECOND_API2 = `?apikey=56mFA4VJG50cfGrVF9JHa8Rx5xNQ2kFB&metric=true`;
-const geoAPI = `http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=56mFA4VJG50cfGrVF9JHa8Rx5xNQ2kFB&q=61.5088128%2C%2023.8092288`;
+ const FIRST_API = 'https://dataservice.accuweather.com/locations/v1/cities/search?apikey=4X5vAvxX4zvpxxvD2G4bHwqZ8OMjlVMA&q=';
+ const SECOND_API1 = `https://dataservice.accuweather.com/forecasts/v1/daily/1day/`;
+ const SECOND_API2 = `?apikey=4X5vAvxX4zvpxxvD2G4bHwqZ8OMjlVMA&metric=true`;
  
 export const WeatherIcons = {
 
