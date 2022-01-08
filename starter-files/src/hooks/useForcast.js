@@ -3,10 +3,10 @@ import axios from 'axios'
 import api from '../api/api';
 import getCurrentDayForecast from '../helpers/getCurrentDayForecast'
 
-// const API_KEY = '7ImADGVxPOKBMlf1aLfNpJxxWYvxlX1U';
- const FIRST_API = 'http://dataservice.accuweather.com/locations/v1/cities/search?apikey=7ImADGVxPOKBMlf1aLfNpJxxWYvxlX1U&q=';
+// const API_KEY = 'qICUihh74lDzPPLDsj55ioWEWrcQ0sAm';
+ const FIRST_API = 'http://dataservice.accuweather.com/locations/v1/cities/search?apikey=qICUihh74lDzPPLDsj55ioWEWrcQ0sAm&q=';
  const SECOND_API1 = `http://dataservice.accuweather.com/forecasts/v1/daily/1day/`;
- const SECOND_API2 = `?apikey=7ImADGVxPOKBMlf1aLfNpJxxWYvxlX1U&metric=true`;
+ const SECOND_API2 = `?apikey=qICUihh74lDzPPLDsj55ioWEWrcQ0sAm&metric=true`;
 
  
 export const WeatherIcons = {
