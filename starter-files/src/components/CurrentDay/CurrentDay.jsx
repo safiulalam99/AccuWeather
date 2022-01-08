@@ -31,12 +31,11 @@ const CurrentDay = ({location, temperature, weatherIcon}) => (
 );
 
 
-CurrentDay.propTypes = {
+// CurrentDay.propTypes = {
    
-    location: PropTypes.string.isRequired,
-    temperature: PropTypes.number.isRequired,
-    weatherIcon
+//     location: PropTypes.string.isRequired,
+//     temperature: PropTypes.number.isRequired,
     
-};
+// };
 
 export default CurrentDay;
