@@ -1,4 +1,4 @@
-# Todo app
+# Weather app
 
 
 ## Goals
